@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto px-5">
 
     <div class="card w-96 bg-base-100 shadow-xl">
       <figure>
