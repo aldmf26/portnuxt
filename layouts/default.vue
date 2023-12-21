@@ -5,6 +5,8 @@
     <div role="tablist" class="space-x-14 tabs tabs-lifted">
       <NuxtLink to="/" role="tab" :class="{ 'tab-active  [--tab-border-color:orange]': isActive('/') }" class="tab">Home
       </NuxtLink>
+      <NuxtLink to="/dynamic" role="tab" :class="{ 'tab-active  [--tab-border-color:orange]': isActive('/dynamic') }"
+        class="tab">Dynamic</NuxtLink>
       <NuxtLink to="/theme" role="tab" :class="{ 'tab-active  [--tab-border-color:orange]': isActive('/theme') }"
         class="tab">Theme</NuxtLink>
     </div>
