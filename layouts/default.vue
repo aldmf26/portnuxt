@@ -7,6 +7,8 @@
       </NuxtLink>
       <NuxtLink to="/dynamic" role="tab" :class="{ 'tab-active  [--tab-border-color:orange]': isActive('/dynamic') }"
         class="tab">Dynamic</NuxtLink>
+      <NuxtLink to="/terjemahan" role="tab" :class="{ 'tab-active  [--tab-border-color:orange]': isActive('/terjemahan') }"
+        class="tab">Terjemahan</NuxtLink>
       <NuxtLink to="/theme" role="tab" :class="{ 'tab-active  [--tab-border-color:orange]': isActive('/theme') }"
         class="tab">Theme</NuxtLink>
     </div>
