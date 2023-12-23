@@ -46,10 +46,12 @@ const isActive = (route) => {
 const themes = ref([
   "light",
   "night",
-  "synthwave",
+  "garden",
+  "coffe",
   "cyberpunk",
   "aqua",
-  "retro",
+  "luxury",
+  "synthwave",
 ]);
 const themeBelum = ref("light");
 
