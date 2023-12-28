@@ -17,11 +17,14 @@
     "nuxt": "^3.8.2",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
+    "vite-plugin-vuetify": "^2.0.1",
     "vue": "^3.3.10",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.4.9"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.1",
+    "@mdi/font": "^7.4.47",
     "vuex": "^4.1.0"
   }
 }

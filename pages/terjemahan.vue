@@ -3,28 +3,35 @@
 
     <div class="grid grid-cols-2 grid-rows-2 gap-4 p-16">
         <div class="">
-            <!-- <div role="tablist" class="tabs tabs-bordered tabs-sm mb-5">
-                <a role="tab" class="tab">Tab 1</a>
-                <a role="tab" class="tab tab-active">Tab 2</a>
-                <a role="tab" class="tab">Tab 3</a>
-            </div> -->
-            <Inputsearch/>
-
-            <textarea class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full "
-                placeholder="Bio"></textarea>
+            <v-autocomplete @update:modelValue="changeDariBahasa" label="Bahasa" v-model="dariBahasa" :items="terjemahans"></v-autocomplete>
+            <textarea autofocus v-model="isi" class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full "
+                placeholder="Masukan teks..."></textarea>
         </div>
         <div class="">
-            <select class="select select-primary w-full max-w-xs">
-                <option disabled selected>What is the best TV show?</option>
-                <option>Game of Thrones</option>
-                <option>Lost</option>
-                <option>Breaking Bad</option>
-                <option>Walking Dead</option>
-            </select>
+            <v-autocomplete @update:modelValue="changeKeBahasa" label="Terjemahan" v-model="keBahasa" :items="terjemahans"></v-autocomplete>
 
-            <textarea disabled class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full "
-                placeholder="Bio"></textarea>
+            <textarea v-model="terjemahan" disabled class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full "
+                placeholder="Terjemahan"></textarea>
         </div>
     </div>
 </template>
+<script setup>
+const dariBahasa = ref('indonesia')
+const keBahasa = ref('')
+const isi = ref('')
+const terjemahan = ref('')
 
+const terjemahans = [
+    'indonesia', 'dayak', 'jawa'
+];
+
+const changeDariBahasa = (value) => {
+  console.log('Dari Bahasa berubah:', value);
+};
+
+const changeKeBahasa = (value) => {
+  console.log('Ke Bahasa berubah:', value);
+};
+
+
+</script>
