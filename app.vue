@@ -5,7 +5,8 @@ const layout = "default";
 </script>
 
 <template>
-  <NuxtLayout :name="layout" >
+  <!-- <NuxtLayout :name="layout" >
     <NuxtPage />
-  </NuxtLayout>
+  </NuxtLayout> -->
+    <NuxtPage />
 </template>
