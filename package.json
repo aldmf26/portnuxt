@@ -25,6 +25,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.1",
     "@mdi/font": "^7.4.47",
+    "@supabase/supabase-js": "^2.39.3",
     "vuex": "^4.1.0"
   }
 }
