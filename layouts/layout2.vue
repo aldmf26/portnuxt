@@ -27,7 +27,7 @@
       -->
     </div>
     <div class="">
-      <div class="dropdown dropdown-hover">
+      <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-sm m-1">
           Theme
           <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
