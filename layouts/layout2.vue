@@ -30,9 +30,8 @@
 
       <div class="relative inline-block text-left dropdown">
         <span class="rounded-md shadow-sm">
-          <button
-          @click="isDropdownOpen = ! isDropdownOpen"
-            class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 transition duration-150 ease-in-out bg-primary border border-gray-300 rounded-md "
+          <button @click="isDropdownOpen = !isDropdownOpen"
+            class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 transition duration-150 ease-in-out bg-base-200 border border-gray-300 rounded-md "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
             <span>Themes</span>
             <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor">
@@ -42,22 +41,21 @@
             </svg>
           </button>
         </span>
-        <div
-        v-show="isDropdownOpen"
+        <div v-show="isDropdownOpen" ref="dropdown"
           class="dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
           <div
-            class="absolute right-0 w-32 mt-2 origin-top-right bg-primary border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+            class="absolute right-0 w-32 mt-2 origin-top-right bg-base-200 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
             aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
             <div class="py-1">
               <div v-for="theme in themes" :key="theme">
                 <a @click="changeTheme(theme)" tabindex="1"
-                  class="text-white cursor-pointer hover:bg-info flex justify-between w-full px-4 py-2 text-sm  text-left"
+                  class="text-base-500 cursor-pointer hover:bg-info flex justify-between w-full px-4 py-2 text-sm  text-left"
                   role="menuitem">
-                   {{theme}}
+                  {{ theme }}
                 </a>
               </div>
             </div>
-          
+
           </div>
         </div>
       </div>
@@ -91,6 +89,24 @@
 
 <script setup>
 const isDropdownOpen = ref(false)
+
+const handleClickOutside = (event) => {
+  if (isDropdownOpen.value && !event.target.closest('.dropdown')) {
+    isDropdownOpen.value = false;
+  }
+};
+
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value;
+};
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
 
 const navbarKategori = ["Indonesia", "Mesir", "Yunani", "Sumeria"];
 const $route = useRoute();
