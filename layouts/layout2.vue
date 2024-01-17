@@ -27,22 +27,22 @@
       -->
     </div>
     <div class="">
-    <--! 
+   
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-sm m-1">
+        <div role="button" class="btn btn-sm m-1">
           Theme
           <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
             <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
           </svg>
         </div>
-        <ul tabindex="0" class="dropdown-content z-[1] menu p-2  shadow bg-base-100 rounded-box">
+        <ul class="dropdown-content z-[1] menu p-2  shadow bg-base-100 rounded-box">
           <li v-for="theme in themes" :key="theme">
             <a @click="changeTheme(theme)">{{ theme }}</a>
           </li>
         </ul>
       </div>
-      -->
+     
       <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
       </svg>
