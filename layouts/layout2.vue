@@ -6,6 +6,7 @@
       <div class="text-primary text-xl font-bold">Logo</div>
     </div>
     <div class="grow ml-16">
+    <!--
       <div class="dropdown dropdown-hover mx-3" v-for="nav in navbarKategori" :key="nav">
         <div tabindex="0" role="button" class="m-1 font-bold">
           <NuxtLink to="/terjemahan" class="mr-2">{{ nav }}</NuxtLink>
@@ -23,6 +24,7 @@
           </li>
         </ul>
       </div>
+      -->
     </div>
     <div class="">
       <div class="dropdown dropdown-hover">
