@@ -8,5 +8,6 @@ const layout = "default";
   <!-- <NuxtLayout :name="layout" >
     <NuxtPage />
   </NuxtLayout> -->
-    <NuxtPage />
+
+    <NuxtPage tabindex="-1" />
 </template>
