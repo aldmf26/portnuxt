@@ -9,5 +9,5 @@ const layout = "default";
     <NuxtPage />
   </NuxtLayout> -->
 
-    <NuxtPage tabindex="-1" />
+    <NuxtPage />
 </template>

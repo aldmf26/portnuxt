@@ -44,7 +44,7 @@
         </div>
         <ul
           tabindex="0"
-          class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
+          class="dropdown-content menu p-2 shadow bg-base-100 rounded-box"
         >
           <li v-for="theme in themes" :key="theme">
             <a @click="changeTheme(theme)">{{ theme }}</a>
