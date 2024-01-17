@@ -13,8 +13,7 @@
                         pandang"..
                     </p>
                     <p class="py-3 text-sm md:text-md" style="letter-spacing: 1px;">
-                        Kata teori memiliki arti yang berbeda-beda pada bidang-bidang pengetahuan yang berbeda pula
-                        tergantung pada metodologi dan konteks diskusi. Secara umum, teori merupakan analisis hubungan
+                        Secara umum, teori merupakan analisis hubungan
                         antara fakta yang satu dengan fakta yang lain pada sekumpulan fakta-fakta .
                     </p>
                     <h1 class=" text-1xl md:text-2xl font-bold">Ketik yang ingin anda cari !</h1>
