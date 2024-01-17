@@ -46,13 +46,12 @@
         v-show="isDropdownOpen"
           class="dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
           <div
-            class="absolute right-0 w-56 mt-2 origin-top-right bg-primary border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+            class="absolute right-0 w-32 mt-2 origin-top-right bg-primary border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
             aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
-        
             <div class="py-1">
               <div v-for="theme in themes" :key="theme">
                 <a @click="changeTheme(theme)" tabindex="1"
-                  class="text-white cursor-pointer hover:bg-info flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                  class="text-white cursor-pointer hover:bg-info flex justify-between w-full px-4 py-2 text-sm  text-left"
                   role="menuitem">
                    {{theme}}
                 </a>
@@ -63,7 +62,7 @@
         </div>
       </div>
 
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-sm m-1">
           Theme
           <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
@@ -76,7 +75,7 @@
             <a @click="changeTheme(theme)">{{ theme }}</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 
