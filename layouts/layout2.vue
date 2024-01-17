@@ -26,7 +26,7 @@
       </div>
       -->
     </div>
-    <div class="" tabindex="0">
+    <div class="">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-sm m-1">
           Theme
