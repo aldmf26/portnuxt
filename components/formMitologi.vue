@@ -4,8 +4,8 @@
     <div class="text-center">
         <ul class="flex-col items-center">
             <li class="space-x-4">
-                <button @click.prevent="selectedLetter = ''" class="underline">All</button>
-                <button @click.prevent="selectedLetter = huruf" v-for="huruf in alphabet" :class="{
+                <button @click="selectedLetter = ''" class="underline">All</button>
+                <button @click="selectedLetter = huruf" v-for="huruf in alphabet" :class="{
                     'hover:underline hover:text-info': groupedData[huruf],
                     'text-disabled': !groupedData[huruf],
                     'p-1 rounded-xl  shadow-custom': selectedLetter === huruf,
