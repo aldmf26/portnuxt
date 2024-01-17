@@ -6,7 +6,7 @@
       <div class="text-primary text-xl font-bold">Logo</div>
     </div>
     <div class="grow ml-16">
-    <!--
+      <!--
       <div class="dropdown dropdown-hover mx-3" v-for="nav in navbarKategori" :key="nav">
         <div tabindex="0" role="button" class="m-1 font-bold">
           <NuxtLink to="/terjemahan" class="mr-2">{{ nav }}</NuxtLink>
@@ -26,68 +26,51 @@
       </div>
       -->
     </div>
-    <div class="">
-    <--! 
+    <div class="" tabindex="0">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-sm m-1">
           Theme
-          <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
-            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+          <svg
+            width="12px"
+            height="12px"
+            class="h-2 w-2 fill-current opacity-60 inline-block"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 2048 2048"
+          >
+            <path
+              d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
+            ></path>
           </svg>
         </div>
-        <ul tabindex="0" class="dropdown-content z-[1] menu p-2  shadow bg-base-100 rounded-box">
+        <ul
+          tabindex="0"
+          class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
+        >
           <li v-for="theme in themes" :key="theme">
             <a @click="changeTheme(theme)">{{ theme }}</a>
           </li>
         </ul>
       </div>
-      -->
-      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-      </svg>
-      </button>
-
-      <!-- Dropdown menu -->
-      <div id="dropdown" class="z-10 hidden bg-primary divide-y rounded-lg shadow w-44">
-          <ul class="py-2 text-sm " aria-labelledby="dropdownDefaultButton">
-            <li>
-              <a href="#" class="block px-4 py-2">Dashboard</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2">Settings</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2">Earnings</a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2">Sign out</a>
-            </li>
-          </ul>
-      </div>
-
     </div>
   </div>
-
 
   <!-- section -->
   <slot />
 
-  <footer class="fixed bottom-0 left-0 w-full footer footer-center p-4 bg-base-300 text-base-content">
+  <footer
+    class="fixed bottom-0 left-0 w-full footer footer-center p-4 bg-base-300 text-base-content"
+  >
     <aside>
       <p>Copyright © 2024 - Muhammad Fahrizaldi</p>
     </aside>
   </footer>
 </template>
 <script setup>
-const navbarKategori = [
-  'Indonesia',
-  'Mesir',
-  'Yunani',
-  'Sumeria',
-]
+const navbarKategori = ["Indonesia", "Mesir", "Yunani", "Sumeria"];
 const $route = useRoute();
-const tabActive = ref("tab-active [--tab-bg:yellow] [--tab-border-color:orange]")
+const tabActive = ref(
+  "tab-active [--tab-bg:yellow] [--tab-border-color:orange]"
+);
 const isActive = (route) => {
   return $route.path === route;
 };
@@ -117,6 +100,3 @@ onMounted(() => {
   changeTheme(themeBelum.value);
 });
 </script>
-  
-  
-  
