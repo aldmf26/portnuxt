@@ -1,21 +1,27 @@
 
 <template>
-<ul>
+  <!-- <ul>
     <li v-for="country in countries" :key="country.id">{{ country.name }}</li>
-  </ul>
+  </ul> -->
+  <NuxtLayout name="default">
     <div class="grid grid-cols-2 grid-rows-2 gap-4 p-16">
-        <div class="">
-            <v-autocomplete @update:modelValue="changeDariBahasa" label="Bahasa" v-model="dariBahasa" :items="terjemahans"></v-autocomplete>
-            <textarea autofocus v-model="isi" class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full "
-                placeholder="Masukan teks..."></textarea>
-        </div>
-        <div class="">
-            <v-autocomplete @update:modelValue="changeKeBahasa" label="Terjemahan" v-model="keBahasa" :items="terjemahans"></v-autocomplete>
-
-            <textarea v-model="terjemahan" disabled class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full "
-                placeholder="Terjemahan"></textarea>
-        </div>
+    <div class="">
+      <v-autocomplete @update:modelValue="changeDariBahasa" label="Bahasa" v-model="dariBahasa"
+        :items="terjemahans"></v-autocomplete>
+      <textarea autofocus v-model="isi" class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full "
+        placeholder="Masukan teks..."></textarea>
     </div>
+    <div class="">
+      <v-autocomplete @update:modelValue="changeKeBahasa" label="Terjemahan" v-model="keBahasa"
+        :items="terjemahans"></v-autocomplete>
+
+      <textarea v-model="terjemahan" disabled
+        class="resize-none mt-3 textarea textarea-primary textarea-lg h-full w-full " placeholder="Terjemahan"></textarea>
+    </div>
+  </div>
+    </NuxtLayout>
+
+  
 </template>
 <script setup>
 const rc = useRuntimeConfig();
@@ -42,7 +48,7 @@ const isi = ref('')
 const terjemahan = ref('')
 
 const terjemahans = [
-    'indonesia', 'dayak', 'jawa'
+  'indonesia', 'dayak', 'jawa'
 ];
 
 const changeDariBahasa = (value) => {
