@@ -4,8 +4,8 @@
     <div class="text-center">
         <ul class="flex-col items-center">
             <li class="space-x-4">
-                <button @click.prevent="selectedLetter = ''" class="underline">All</button>
-                <button @click.prevent="selectedLetter = huruf" v-for="huruf in alphabet" :class="{
+                <button @click="selectedLetter = ''" class="underline">All</button>
+                <button @click="selectedLetter = huruf" v-for="huruf in alphabet" :class="{
                     'hover:underline hover:text-info': groupedData[huruf],
                     'text-disabled': !groupedData[huruf],
                     'p-1 rounded-xl  shadow-custom': selectedLetter === huruf,
@@ -17,7 +17,7 @@
         <div
             v-if="groupedData[letter] && groupedData[letter].length > 0 && filteredTitles[letter].length > 0 && (selectedLetter === letter || selectedLetter === '')">
             <h5 class="text-3xl bg-base-300 py-2 px-2 mt-5">{{ letter }}</h5>
-            <div class="grid grid-cols-3 gap-4 py-5 px-3">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-5 px-3">
                 <div v-for="title in filteredTitles[letter]" :key="title">
                     <div>
                         <a href="" class="hover:underline hover:text-info">{{ title }}</a>
