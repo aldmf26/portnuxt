@@ -5,53 +5,23 @@
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
     <div class="grow ml-16 ">
-      
+
 
       <!-- navbar other -->
 
-      <div 
-         class="hidden md:inline-block relative  text-left dropdown"
-        v-for="(nav, index) in navbarKategori" :key="index">
+      <div class="hidden md:inline-block relative  text-left dropdown" v-for="(nav, index) in navbarKategori"
+        :key="index">
         <span class="rounded-md shadow-sm">
-          <button 
-            class="hover:underline inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 " type="button"
-            aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
+          <button
+            class="hover:underline inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 "
+            type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
             <span>{{ nav }}</span>
-         
+
           </button>
         </span>
       </div>
 
-      <!-- navbar ada dropdown -->
-      <!-- <div :class="'dropdown-' + index" @mouseover="isDropdownNavbarOpen[index] = true"
-        @mouseleave="isDropdownNavbarOpen[index] = false" class="hidden md:inline-block relative  text-left dropdown"
-        v-for="(nav, index) in navbarKategori" :key="index">
-        <span class="rounded-md shadow-sm">
-          <button @click="toggleDropdown(index)"
-            class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 " type="button"
-            aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-            <span>{{ nav }}</span>
-         
-          </button>
-        </span>
-        <div v-show="isDropdownNavbarOpen[index]" ref="dropdown"
-          class="dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
-          <div
-            class="absolute right-0 w-32 mt-2 origin-top-right bg-base-200 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
-            aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
-            <div class="py-1">
-              <div v-for="item in themes" :key="item">
-                <a tabindex="1"
-                  class="text-base-500 cursor-pointer hover:bg-info flex justify-between w-full px-4 py-2 text-sm  text-left"
-                  role="menuitem">
-                  {{ item }}
-                </a>
-              </div>
-            </div>
 
-          </div>
-        </div>
-      </div> -->
     </div>
 
 
@@ -100,13 +70,22 @@
   </div>
 
   <!-- section -->
-  <slot />
+  <div class="container py-10 mx-auto bg-base-200 ">
+    <div class="hero-content md:px-4 lg:px-48 ">
+      <div class="">
+        <slot />
 
-  <footer class="fixed bottom-0 left-0 w-full footer footer-center p-4 bg-base-300 text-base-content">
+      </div>
+    </div>
+  </div>
+
+  <footer class=" w-full footer footer-center p-4 bg-base-300 text-base-content">
     <aside>
-      <p>Copyright © 2024 - Muhammad Fahrizaldi</p>
+      <p class="text-start">Copyright © 2024 - Muhammad Fahrizaldi </p>
     </aside>
+    
   </footer>
+  
 </template>
 
 <script setup>

@@ -6,7 +6,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-
+.font-content {
+  font-family: "Proxima Nova", system-ui, sans-serif;
+}
 @layer utilities {
   .shadow-custom {
     box-shadow: 
@@ -45,4 +47,24 @@ body {
   .shadow-custom {
     animation: neonAnimation 2s infinite; /* Sesuaikan durasi animasi dan efek sesuai keinginan Anda */
   }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: oklch(var(--a));
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: oklch(var(--p));
+    border-radius: 5px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: oklch(var(--s));
 }

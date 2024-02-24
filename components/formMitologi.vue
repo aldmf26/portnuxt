@@ -20,7 +20,7 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-5 px-3">
                 <div v-for="title in filteredTitles[letter]" :key="title">
                     <div>
-                        <a href="" class="hover:underline hover:text-info">{{ title }}</a>
+                        <a @click="handleRedirect(title.toLowerCase().replace(/\s+/g, '-'))" class="cursor-pointer hover:underline hover:text-info">{{ title }}</a>
                     </div>
                 </div>
             </div>
@@ -73,6 +73,10 @@ const filteredTitles = computed(() => {
     }
     return filtered;
 });
+const router = useRouter()
+const handleRedirect = (slug) => {
+    router.push(`/blog/${slug}`)
+}
 
 
 </script>
