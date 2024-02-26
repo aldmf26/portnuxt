@@ -7,6 +7,9 @@
 .content h1 {
     @apply text-3xl text-error mb-3 font-mono;
 }
+.content b {
+    @apply font-semibold;
+}
 </style>
 
 <template>
@@ -28,7 +31,7 @@
                 </figure>
 
             </div>
-            <div v-html="data.body" class="font-sans content"></div>
+            <div v-html="data.body" class="font-content content"></div>
             <div class="py-28 ">
                 <h1 class="text-2xl md:text-3xl font-bold">Baca Selanjutnya</h1>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
@@ -69,7 +72,7 @@ onMounted(async () => {
             tgl: '2024-02-24 12:30:00',
             deskripsi: 'Deskripsi for Atlantis',
             img: 'https://asset-a.grid.id/crop/0x0:0x0/x/photo/2022/10/08/atlantisjpg-20221008101424.jpg',
-            body: '<h1>Apa Atlantis ?</h1><p>Dalam bukunya "Encyclopedia of Dubious Archaeology" profesor arkeologi Ken Feder mencatat bahwa dalam cerita Plato, "Atlantis bukanlah tempat untuk dihormati atau ditiru sama sekali. Atlantis bukanlah masyarakat yang sempurna. Justru sebaliknya, Atlantis adalah perwujudan dari negara yang kaya secara materi, maju secara teknologi, dan kuat secara militer yang telah dirusak oleh kekayaan, kecanggihan, dan kekuatannya."</p>'
+            body: '<h1>Apa Atlantis ?</h1><p>Dalam bukunya "<b>Encyclopedia of Dubious Archaeology</b>" profesor arkeologi Ken Feder mencatat bahwa dalam cerita Plato, "Atlantis bukanlah tempat untuk dihormati atau ditiru sama sekali. Atlantis bukanlah masyarakat yang sempurna. Justru sebaliknya, Atlantis adalah perwujudan dari negara yang kaya secara materi, maju secara teknologi, dan kuat secara militer yang telah dirusak oleh kekayaan, kecanggihan, dan kekuatannya."</p>'
         },
 
         {

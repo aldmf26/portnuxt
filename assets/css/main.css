@@ -8,7 +8,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .font-content {
-  font-family: "Proxima Nova", system-ui, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 34px;
 }
 @layer utilities {
   .shadow-custom {
