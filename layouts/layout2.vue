@@ -1,6 +1,6 @@
 <template>
   <!-- navbar -->
-  <div class="container mx-auto p-2 hidden md:flex">
+  <div class="container mx-auto p-2 flex">
     <div class="">
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
@@ -9,21 +9,14 @@
 
       <!-- navbar other -->
 
-      <div class="hidden md:inline-block relative  text-left dropdown">
+      <div class="hidden md:inline-block relative  text-left dropdown" v-for="(nav, index) in navbarKategori"
+        :key="index">
         <span class="rounded-md shadow-sm">
           <button
-            class="hover:underline inline-flex justify-center w-full px-4 py-2 text-md font-medium leading-5 text-base-500 "
+            class="hover:underline inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-            <span>Favorites</span>
-          </button>
-        </span>
-      </div>
-      <div class="hidden md:inline-block relative  text-left dropdown">
-        <span class="rounded-md shadow-sm">
-          <button
-            class="hover:underline inline-flex justify-center w-full px-4 py-2 text-md font-medium leading-5 text-base-500 "
-            type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-            <span>Contact</span>
+            <span>{{ nav }}</span>
+
           </button>
         </span>
       </div>
@@ -31,6 +24,15 @@
 
     </div>
 
+
+    <div class="mr-2">
+      <button @click="toggleMobileMenu"
+        class="block border border-lg border-primary rounded sm:hidden p-1  focus:outline-none">
+        <span class="block w-6 h-1 bg-accent mb-1"></span>
+        <span class="block w-6 h-1 bg-accent mb-1"></span>
+        <span class="block w-6 h-1 bg-accent"></span>
+      </button>
+    </div>
     <div class="">
       <div class="relative inline-block text-left dropdown">
 
@@ -76,26 +78,14 @@
       </div>
     </div>
   </div>
-  <div class="btm-nav md:hidden ">
-    <button>
-      <img width="23" height="23" src="https://img.icons8.com/ios/23/home--v1.png" alt="home--v1" />
-      <NuxtLink to="/" class="btm-nav-label">Home</NuxtLink>
-    </button>
-    <button class="active">
-      <img width="25" height="25" src="https://img.icons8.com/neon/25/filled-like.png" alt="filled-like" />
-      <span class="btm-nav-label">Favorits</span>
-    </button>
-    <button>
-      <img width="25" height="25" src="https://img.icons8.com/ios/25/phone-disconnected.png" alt="phone-disconnected" />
-      <span class="btm-nav-label">Contact</span>
-    </button>
-  </div>
+
   <footer class=" w-full footer footer-center p-4 bg-base-300 text-base-content">
     <aside>
       <p class="text-start">Copyright © 2024 - Muhammad Fahrizaldi </p>
     </aside>
-
+    
   </footer>
+  
 </template>
 
 <script setup>
