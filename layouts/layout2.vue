@@ -24,7 +24,7 @@
       <div class="relative inline-block text-left dropdown">
         <span class="rounded-md shadow-sm">
           <button @click="isDropdownOpen = !isDropdownOpen"
-            class="inline-flex justify-center w-full px-4 py-2 btn btn-ghost text-sm font-medium leading-5 text-base-500 transition duration-150 ease-in-out btn-sm rounded-md "
+            class="inline-flex justify-center w-full px-4 py-2 btn btn-ghost text-sm btn-md font-medium leading-5 text-base-500 transition duration-150 ease-in-out  rounded-md "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
             <span>Themes</span>
             <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor">
@@ -60,7 +60,7 @@
         <div class="drawer-content">
           <!-- Page content here -->
 
-          <label for="my-drawer" class="btn btn-sm btn-outline-primary drawer-button">
+          <label for="my-drawer" class="btn btn-md btn-outline-primary drawer-button">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
               class="inline-block w-5 h-5 stroke-current">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
