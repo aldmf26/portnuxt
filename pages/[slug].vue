@@ -54,7 +54,6 @@
                     <img class="mb-5 transition-shadow rounded-lg w-72 h-60" :src="artikel.img_heading"
                         alt="image description">
                     <h1 class="text-xl md:text-lg font-bold">{{ artikel.judul }}</h1>
-                    <span class="underline text-info ">Baca Selanjutnya...</span>
                 </NuxtLink>
             </div>
         </div>
