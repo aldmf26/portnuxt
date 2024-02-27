@@ -72,10 +72,10 @@ const slug = route.params.slug
 const data = ref({})
 const artikelLainnya = ref({})
 
-const { API_LINK } = useRuntimeConfig().public
+const api_link = "https://sarang.ptagafood.com/api/blog"
 
-const link = `${API_LINK}/${slug}`
-const linkLainnya = `${API_LINK}/lainnya/${slug}`
+const link = `${api_link}/${slug}`
+const linkLainnya = `${api_link}/lainnya/${slug}`
 
 
 const formatDate = (dateTimeString) => {

@@ -35,7 +35,7 @@ const groupedData = ref({})
 
 const {API_LINK} = useRuntimeConfig().public
 
-const link = API_LINK
+const link = "https://sarang.ptagafood.com/api/blog"
 
 onMounted(async () => {
     const response = await $fetch(link)
