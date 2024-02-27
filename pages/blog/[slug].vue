@@ -75,6 +75,8 @@
 </template>
 
 <script setup>
+
+
 const route = useRoute()
 const router = useRouter()
 const slug = route.params.slug
@@ -86,6 +88,9 @@ const api_link = "https://sarang.ptagafood.com/api/blog"
 const link = `${api_link}/${slug}`
 const linkLainnya = `${api_link}/lainnya/${slug}`
 
+useHead({
+  title: `${slug.toUpperCase()} - Aldy Theory`
+})
 
 const formatDate = (dateTimeString) => {
     const date = new Date(dateTimeString);

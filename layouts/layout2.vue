@@ -73,14 +73,6 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
-const $route = useRoute();
-const tabActive = ref(
-  "tab-active [--tab-bg:yellow] [--tab-border-color:orange]"
-);
-const isActive = (route) => {
-  return $route.path === route;
-};
 const navbarKategori = ["Favorites", "Contact"];
 
 const themes = ref([

@@ -17,4 +17,8 @@
     <h1 class=" text-1xl md:text-2xl font-bold">Ketik yang ingin anda cari !</h1>
     <FormMitologi />
 </template>
-
+<script setup>
+useHead({
+  title: `Home - Aldy Theory`
+})
+</script>
