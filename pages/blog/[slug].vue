@@ -14,7 +14,7 @@
 </style>
 
 <template>
-    <div class="" v-if="data.judul">
+    <div v-if="data.judul">
         <div class="flex justify-between items-center">
             <div>
                 <span @click="goBack" class="hover:underline cursor-pointer">
@@ -44,14 +44,14 @@
         <div v-html="data.content" class="font-content content"></div>
 
 
-        <div class="py-28 ">
+        <div class="mt-5">
             <h1 class="text-2xl md:text-3xl font-bold">Baca Selanjutnya</h1>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
                 <NuxtLink :to="artikel.judul" v-for="artikel in artikelLainnya" class="cursor-pointer">
                     <img class="mb-5 transition-shadow rounded-lg w-72 h-60" :src="artikel.img_heading"
                         alt="image description">
                     <h1 class="text-xl md:text-lg font-bold">{{ artikel.judul }}</h1>
-                    <span class="underline text-info ">Baca</span>
+                    <span class="underline text-info ">Baca Selanjutnya...</span>
                 </NuxtLink>
             </div>
         </div>

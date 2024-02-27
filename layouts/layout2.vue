@@ -5,19 +5,19 @@
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
     <div class="">
-      <div class="relative px-3 text-left dropdown" v-for="(nav, index) in navbarKategori"
-        :key="index">
+      <div class="relative px-3 text-left dropdown" v-for="(nav, index) in navbarKategori" :key="index">
         <span class="rounded-md shadow-sm">
           <button
             class="hover:underline inline-flex justify-center w-full py-2 text-sm font-medium leading-5 text-base-500 "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-            <NuxtLink :to="nav.toLowerCase()" :class="$route.name == nav.toLowerCase() ? 'btn-primary' : 'btn-ghost'" class="btn btn-xs md:btn-sm">{{ nav }}</NuxtLink>
+            <NuxtLink :to="nav.toLowerCase()" :class="$route.name == nav.toLowerCase() ? 'btn-primary' : 'btn-ghost'"
+              class="btn btn-xs md:btn-sm">{{ nav }}</NuxtLink>
 
           </button>
         </span>
       </div>
     </div>
-    
+
     <div class="">
       <div class="relative inline-block text-left dropdown">
         <span class="rounded-md shadow-sm">
@@ -55,7 +55,7 @@
   </div>
 
   <!-- section -->
-  <div class="container py-10 mx-auto bg-base-200 ">
+  <div class="container mx-auto bg-base-200 ">
     <div class="hero-content md:px-4 lg:px-48 ">
       <div class="">
         <slot />
