@@ -24,7 +24,7 @@
       <div class="relative inline-block text-left dropdown">
         <span class="rounded-md shadow-sm">
           <button @click="isDropdownOpen = !isDropdownOpen"
-            class="inline-flex justify-center w-full px-4 py-2 btn btn-ghost text-sm btn-md font-medium leading-5 text-base-500 transition duration-150 ease-in-out  rounded-md "
+            class="inline-flex justify-center w-full btn btn-ghost btn-sm"
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
             <span>Themes</span>
             <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor">
