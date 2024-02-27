@@ -4,8 +4,8 @@
     <div class="">
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
-    <div class="">
-      <div class="relative px-3 text-left dropdown" v-for="(nav, index) in navbarKategori" :key="index">
+    <div class="hidden md:block">
+      <div class="px-3 text-left dropdown" v-for="(nav, index) in navbarKategori" :key="index">
         <span class="rounded-md shadow-sm">
           <button
             class="hover:underline inline-flex justify-center w-full py-2 text-sm font-medium leading-5 text-base-500 "
@@ -52,6 +52,27 @@
 
       </div>
     </div>
+    <div class="md:hidden block">
+      <div class="drawer drawer-end">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <!-- Page content here -->
+
+          <label for="my-drawer" class="btn btn-sm btn-outline-primary drawer-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </label>
+        </div>
+        <div class="drawer-side">
+          <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+          <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+            <li v-for="nav in navbarKategori"><a>{{nav}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- section -->
@@ -73,8 +94,8 @@
 </template>
 
 <script setup>
-const navbarKategori = ["Glosarium","Favorites", "Contact"];
-
+const navbarKategori = ["Glosarium", "Favorites", "Contact"];
+const menuDropdown = ref(false)
 const themes = ref([
   "light",
   "night",
