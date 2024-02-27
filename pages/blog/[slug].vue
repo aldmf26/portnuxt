@@ -89,7 +89,7 @@ const link = `${api_link}/${slug}`
 const linkLainnya = `${api_link}/lainnya/${slug}`
 
 useHead({
-  title: `${slug.toUpperCase()} - Aldy Theory`
+  title: `${slug.toUpperCase()} - Aldi Teori`
 })
 
 const formatDate = (dateTimeString) => {

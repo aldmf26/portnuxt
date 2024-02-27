@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-2xl md:text-3xl font-bold ">AldiTeory.net</h1>
+    <h1 class="text-2xl md:text-3xl font-bold ">Aldi Teori</h1>
     <p class="py-6 text-sm md:text-md" style="letter-spacing: 1px;">
         Pencarian umum di antara semua budaya
         untuk
@@ -19,6 +19,6 @@
 </template>
 <script setup>
 useHead({
-  title: `Home - Aldy Theory`
+  title: `Home - Aldi Teori`
 })
 </script>
