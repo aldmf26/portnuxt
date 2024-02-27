@@ -5,11 +5,7 @@
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
     <div class="">
-
-
-      <!-- navbar other -->
-
-      <div class="relative text-left dropdown" v-for="(nav, index) in navbarKategori"
+      <div class="relative px-3 text-left dropdown" v-for="(nav, index) in navbarKategori"
         :key="index">
         <span class="rounded-md shadow-sm">
           <button
