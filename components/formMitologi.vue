@@ -74,7 +74,7 @@ const filteredTitles = computed(() => {
 
 const router = useRouter()
 const handleRedirect = (slug) => {
-    router.push(`/blog/${slug}`)
+    router.push(`/${slug}`)
 }
 
 

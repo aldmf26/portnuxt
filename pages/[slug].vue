@@ -21,9 +21,12 @@
                     <Icon size="20" name="material-symbols:keyboard-double-arrow-left" /> Kembali
                 </span>
             </div>
-            <NuxtLink to="/" class="btn btn-ghost">
-                X
-            </NuxtLink>
+            <div>
+                <span class="btn btn-sm btn-ghost text-xs mr-2">Suka <span class="text-lg">&#9829;</span></span>
+                <NuxtLink to="/" class="btn btn-ghost btn-sm">
+                    X
+                </NuxtLink>
+            </div>
         </div>
 
         <h1 class="float-start text-2xl md:text-5xl font-bold mt-10">{{ data.judul.toUpperCase()}}</h1>

@@ -8,7 +8,7 @@
       <div class="px-3 text-left dropdown" v-for="(nav, index) in navbarKategori" :key="index">
         <span class="rounded-md shadow-sm">
           <button
-            class="hover:underline inline-flex justify-center w-full py-2 text-sm font-medium leading-5 text-base-500 "
+            class="inline-flex justify-center w-full py-2 text-sm font-medium leading-5 text-base-500 "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
             <NuxtLink :to="nav.toLowerCase()" :class="$route.name == nav.toLowerCase() ? 'btn-primary' : 'btn-ghost'"
               class="btn btn-xs md:btn-sm">{{ nav }}</NuxtLink>
@@ -67,8 +67,8 @@
         </div>
         <div class="drawer-side">
           <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-          <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            <li v-for="nav in navbarKategori"><a>{{nav}}</a></li>
+          <ul class="menu p-4 w-44 min-h-full bg-base-200 text-base-content">
+            <li v-for="nav in navbarKategori"><NuxtLink class="btn mb-4 btn-sm btn-outline-primary" :to="nav.toLowerCase()">{{nav}}</NuxtLink></li>
           </ul>
         </div>
       </div>
@@ -94,7 +94,7 @@
 </template>
 
 <script setup>
-const navbarKategori = ["Glosarium", "Favorites", "Contact"];
+const navbarKategori = ["Glosarium", "Disukai", "Kontak"];
 const menuDropdown = ref(false)
 const themes = ref([
   "light",
