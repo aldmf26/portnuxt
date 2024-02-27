@@ -73,7 +73,7 @@
 </template>
 
 <script setup>
-const navbarKategori = ["Favorites", "Contact"];
+const navbarKategori = ["Glosarium","Favorites", "Contact"];
 
 const themes = ref([
   "light",
