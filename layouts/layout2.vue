@@ -4,7 +4,7 @@
     <div class="">
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
-    <div class="grow ml-16 ">
+    <div class="grow ml-5">
 
 
       <!-- navbar other -->
