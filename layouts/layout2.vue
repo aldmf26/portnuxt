@@ -1,10 +1,10 @@
 <template>
   <!-- navbar -->
-  <div class="container mx-auto p-2 flex items-center">
+  <div class="container mx-auto p-2 flex justify-between items-center">
     <div class="">
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
-    <div class="grow ml-5">
+    <div class="">
 
 
       <!-- navbar other -->
