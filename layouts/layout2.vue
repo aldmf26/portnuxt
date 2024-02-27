@@ -1,8 +1,10 @@
 <template>
   <!-- navbar -->
-  <div class="container mx-auto p-2 flex justify-between items-center">
+  <div class="container mx-auto p-2 flex justify-evenly items-center">
     <div class="">
-      <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
+      <NuxtLink to="/" class="text-primary text-xl font-bold">
+        <img src="~/public/man.png" class="w-14" alt="">
+      </NuxtLink>
     </div>
     <div class="hidden md:block">
       <div class="px-3 text-left dropdown" v-for="(nav, index) in navbarKategori" :key="index">
