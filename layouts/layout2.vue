@@ -1,6 +1,6 @@
 <template>
   <!-- navbar -->
-  <div class="container mx-auto p-2 flex">
+  <div class="container mx-auto p-2 flex items-center">
     <div class="">
       <NuxtLink to="/" class="text-primary text-xl font-bold">Logo</NuxtLink>
     </div>
@@ -9,33 +9,21 @@
 
       <!-- navbar other -->
 
-      <div class="hidden md:inline-block relative  text-left dropdown" v-for="(nav, index) in navbarKategori"
+      <div class="relative text-left dropdown" v-for="(nav, index) in navbarKategori"
         :key="index">
         <span class="rounded-md shadow-sm">
           <button
-            class="hover:underline inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 "
+            class="hover:underline inline-flex justify-center w-full py-2 text-sm font-medium leading-5 text-base-500 "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-            <NuxtLink :to="nav.toLowerCase()" :class="{'underline text-blue-500' : $route.name == nav.toLowerCase()}" class="hover:text-blue-500">{{ nav }}</NuxtLink>
+            <NuxtLink :to="nav.toLowerCase()" :class="$route.name == nav.toLowerCase() ? 'btn-primary' : 'btn-ghost'" class="btn btn-xs md:btn-sm">{{ nav }}</NuxtLink>
 
           </button>
         </span>
       </div>
-
-
     </div>
-
-
-    <div class="mr-2">
-      <button @click="toggleMobileMenu"
-        class="block border border-lg border-primary rounded sm:hidden p-1  focus:outline-none">
-        <span class="block w-6 h-1 bg-accent mb-1"></span>
-        <span class="block w-6 h-1 bg-accent mb-1"></span>
-        <span class="block w-6 h-1 bg-accent"></span>
-      </button>
-    </div>
+    
     <div class="">
       <div class="relative inline-block text-left dropdown">
-
         <span class="rounded-md shadow-sm">
           <button @click="isDropdownOpen = !isDropdownOpen"
             class="inline-flex justify-center w-full px-4 py-2 btn btn-ghost text-sm font-medium leading-5 text-base-500 transition duration-150 ease-in-out btn-sm rounded-md "
