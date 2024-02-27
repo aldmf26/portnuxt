@@ -26,7 +26,7 @@
             </NuxtLink>
         </div>
 
-        <h1 class="float-start text-2xl md:text-5xl font-bold mt-10">{{ data.judul ?? 'Tidak Ada Data' }}</h1>
+        <h1 class="float-start text-2xl md:text-5xl font-bold mt-10">{{ data.judul.toUpperCase()}}</h1>
         <p class="italic text-[9px] md:text-xs text-inherit">Publish: {{ formatDate(data.tgl_publish) }}</p>
 
         <div>
