@@ -20,7 +20,8 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-5 px-3">
                 <div v-for="title in filteredTitles[letter]" :key="title">
                     <div>
-                        <a @click="handleRedirect(title.toLowerCase().replace(/\s+/g, '-'))" class="cursor-pointer hover:underline hover:text-info">{{ title }}</a>
+                        <a @click="handleRedirect(title.toLowerCase().replace(/\s+/g, '-'))"
+                            class="cursor-pointer hover:underline hover:text-info">{{ title }}</a>
                     </div>
                 </div>
             </div>
@@ -28,51 +29,49 @@
     </div>
 </template>
 <script setup>
+const judul = ref([])
+const dummyTitles = ref([]);
+const groupedData = ref({})
 
+const {API_LINK} = useRuntimeConfig().public
 
+const link = API_LINK
+
+onMounted(async () => {
+    const response = await $fetch(link)
+    dummyTitles.value = response.map(post => (post.judul));
+
+    groupedData.value = dummyTitles.value.reduce((acc, title) => {
+        const firstLetter = title[0].toUpperCase();
+        acc[firstLetter] = acc[firstLetter] || [];
+        acc[firstLetter].push(title);
+        return acc;
+    }, {});
+
+    for (const letter in groupedData.value) {
+        if (Array.isArray(groupedData.value[letter])) {
+            groupedData.value[letter].sort();
+        }
+    }
+
+})
 const alphabet = Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index));
-const dummyTitles = [
-    'Arius',
-    'Atlantis',
-    'Hera',
-    'Azazil',
-    'Alexander Agung',
-    'Achilles',
-    'Ares',
-    'Lucifer',
-    'Namrud',
-    'Nebukadnezar',
-    'Lemuria',
-    'Sundaland',
-    'Zeus',
-    'Poseidon',
-    'Hades',
-    'Persephone'
-];
+
 const selectedLetter = ref('');
 const searchTerm = ref('');
-// Buat objek untuk mengelompokkan judul berdasarkan huruf awal
-const groupedData = dummyTitles.reduce((acc, title) => {
-    const firstLetter = title[0].toUpperCase();
-    acc[firstLetter] = acc[firstLetter] || [];
-    acc[firstLetter].push(title);
-    return acc;
-}, {});
 
-// Urutkan setiap grup berdasarkan judulnya
-for (const letter in groupedData) {
-    groupedData[letter].sort();
-}
 
 const filteredTitles = computed(() => {
     const filtered = {};
-    for (const letter in groupedData) {
-        filtered[letter] = groupedData[letter].filter(title =>
+    for (const letter in groupedData.value) {
+        filtered[letter] = groupedData.value[letter].filter(title =>
             title.toLowerCase().includes(searchTerm.value.toLowerCase())
         );
     }
     return filtered;
 });
+
+
 const router = useRouter()
 const handleRedirect = (slug) => {
     router.push(`/blog/${slug}`)

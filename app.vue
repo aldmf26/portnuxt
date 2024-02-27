@@ -1,3 +1,5 @@
 <template>
-    <NuxtPage class="fredoka" />
+    <NuxtLayout name="layout2">
+        <NuxtPage />
+    </NuxtLayout>
 </template>

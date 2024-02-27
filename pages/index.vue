@@ -1,5 +1,4 @@
 <template>
-    <NuxtLayout name="layout2">
 
         <h1 class="text-2xl md:text-3xl font-bold ">AldiTeory.net</h1>
         <p class="py-6 text-sm md:text-md" style="letter-spacing: 1px;">
@@ -18,6 +17,5 @@
         </p>
         <h1 class=" text-1xl md:text-2xl font-bold">Ketik yang ingin anda cari !</h1>
         <FormMitologi />
-    </NuxtLayout>
 </template>
 

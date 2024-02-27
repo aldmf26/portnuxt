@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     public: {
       URL: process.env.URL,
       TOKEN: process.env.TOKEN,
+      API_LINK: process.env.API_LINK,
     },
   },
   build: {

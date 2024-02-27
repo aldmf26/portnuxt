@@ -15,7 +15,7 @@
           <button
             class="hover:underline inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-            <span>{{ nav }}</span>
+            <NuxtLink :to="nav.toLowerCase()" :class="{'underline text-blue-500' : $route.name == nav.toLowerCase()}" class="hover:text-blue-500">{{ nav }}</NuxtLink>
 
           </button>
         </span>
@@ -38,7 +38,7 @@
 
         <span class="rounded-md shadow-sm">
           <button @click="isDropdownOpen = !isDropdownOpen"
-            class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-base-500 transition duration-150 ease-in-out bg-base-200 border border-gray-300 rounded-md "
+            class="inline-flex justify-center w-full px-4 py-2 btn btn-ghost text-sm font-medium leading-5 text-base-500 transition duration-150 ease-in-out btn-sm rounded-md "
             type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
             <span>Themes</span>
             <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor">
@@ -49,9 +49,9 @@
           </button>
         </span>
         <div v-show="isDropdownOpen" ref="dropdown"
-          class="dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+          class="dropdown-menu  transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
           <div
-            class="absolute right-0 w-32 mt-2 origin-top-right bg-base-200 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+            class="absolute  right-0 w-32 mt-2 origin-top-right bg-base-200 border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
             aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
             <div class="py-1">
               <div v-for="theme in themes" :key="theme">
@@ -65,6 +65,7 @@
 
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -83,9 +84,8 @@
     <aside>
       <p class="text-start">Copyright © 2024 - Muhammad Fahrizaldi </p>
     </aside>
-    
+
   </footer>
-  
 </template>
 
 <script setup>
@@ -97,7 +97,7 @@ const tabActive = ref(
 const isActive = (route) => {
   return $route.path === route;
 };
-const navbarKategori = ["Indonesia", "India", 'Yunani', 'Mesir', 'Other'];
+const navbarKategori = ["Favorites", "Contact"];
 
 const themes = ref([
   "light",
