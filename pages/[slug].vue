@@ -15,7 +15,7 @@
     @apply font-semibold;
 }
 .content img {
-    @apply max-w-[500px] max-h-[333px];
+    @apply max-w-[300px] max-h-[133px];
 }
 </style>
 
