@@ -5,7 +5,10 @@
 }
 
 .content h1 {
-    @apply text-3xl text-error mb-3 font-mono;
+    @apply text-3xl text-error mb-3 font-mono pt-8;
+}
+.content h2 {
+    @apply text-xl text-primary mb-3 font-mono pt-5;
 }
 
 .content b {
@@ -35,7 +38,7 @@
         <div>
             <figure class="block transition-all duration-300 cursor-pointer py-8">
                 <a href="#">
-                    <img class="shadow-aldi transition-shadow rounded-lg w-96 h-80" :src="data.img_heading"
+                    <img class="shadow-aldi transition-shadow rounded-lg w-96 h-80 mb-[-35px]" :src="data.img_heading"
                         alt="image description">
                 </a>
 
