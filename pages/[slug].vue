@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 .shadow-aldisad {
     box-shadow: 0px 7px 10px oklch(var(--p));
     /* Ganti nilai warna sesuai keinginan Anda */
