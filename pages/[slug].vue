@@ -14,6 +14,9 @@
 .content b {
     @apply font-semibold;
 }
+.content img {
+    @apply max-w-[500px] max-h-[333px];
+}
 </style>
 
 <template>
