@@ -101,8 +101,8 @@
           <mask id="top-b" fill="#ffffff">
             <use xlink:href="#top-a" />
           </mask>
-          <use fill="#D8D8D8" fill-rule="nonzero" xlink:href="#top-a" />
-          <g fill="#FFA0A0" mask="url(#top-b)">
+          <use fill="" fill-rule="nonzero" xlink:href="#top-a" />
+          <g fill="" mask="url(#top-b)">
             <rect width="24" height="24" transform="translate(-8 -8)" />
           </g>
         </g>
@@ -110,7 +110,7 @@
           <use xlink:href="#top-c" />
         </mask>
         <use fill="#000000" fill-rule="nonzero" xlink:href="#top-c" />
-        <g fill="#7600FF" mask="url(#top-d)">
+        <g fill="" mask="url(#top-d)">
           <rect width="24" height="24" transform="translate(-5 -7)" />
         </g>
       </g>
@@ -125,7 +125,7 @@
 </template>
 
 <script setup>
-const navbarKategori = ["Glosarium", "Disukai", "Kontak"];
+const navbarKategori = ["Artikel", "Disukai", "Kontak"];
 const themes = ref([
   "light",
   "night",
