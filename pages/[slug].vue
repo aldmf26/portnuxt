@@ -7,6 +7,7 @@
 .content h1 {
     @apply text-3xl text-error mb-3 font-mono pt-8;
 }
+
 .content h2 {
     @apply text-xl text-primary mb-3 font-mono pt-5;
 }
@@ -14,6 +15,7 @@
 .content b {
     @apply font-semibold;
 }
+
 .content img {
     @apply max-w-[300px] max-h-[133px];
 }
@@ -35,7 +37,7 @@
             </div>
         </div>
 
-        <h1 class="float-start text-2xl md:text-5xl font-bold mt-10">{{ data.judul.toUpperCase()}}</h1>
+        <h1 class="float-start text-2xl md:text-5xl font-bold mt-10">{{ data.judul.toUpperCase() }}</h1>
         <p class="italic text-[9px] md:text-xs text-inherit">Publish: {{ formatDate(data.tgl_publish) }}</p>
 
         <div>
@@ -65,7 +67,7 @@
         </div>
 
     </div>
-    <div v-else>
+    <div v-else-if="isLoading">
         <div role="status" class="float-center items-center">
             <svg aria-hidden="true"
                 class="w-1/6 h-1/6 text-center float-center justify-center items-center text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
@@ -80,10 +82,19 @@
             <span class="sr-only">Loading...</span>
         </div>
     </div>
+    <div v-else>
+        <div class="text-center">
+            <h1 class="text-3xl font-bold mb-4">404 Not Found</h1>
+            <p class="text-lg">Maaf, halaman yang Anda cari tidak ditemukan. <a class="btn btn-sm btn-error"
+                    @click="goBack">Kembali</a></p>
+        </div>
+
+    </div>
 </template>
 
 <script setup>
 
+const isLoading = ref(true)
 
 const route = useRoute()
 const router = useRouter()
@@ -97,7 +108,7 @@ const link = `${api_link}/${slug}`
 const linkLainnya = `${api_link}/lainnya/${slug}`
 
 useHead({
-  title: `${slug.toUpperCase()} - Aldi Teori`
+    title: `${slug.toUpperCase()} - Aldi Teori`
 })
 
 const formatDate = (dateTimeString) => {
@@ -118,6 +129,7 @@ onMounted(async () => {
     if (!data.value) {
         router.push('/')
     }
+    isLoading.value = false;
 
     const responselainnya = await $fetch(linkLainnya)
     artikelLainnya.value = responselainnya
