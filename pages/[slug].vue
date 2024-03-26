@@ -30,7 +30,7 @@
                 </span>
             </div>
             <div>
-                <span class="btn btn-sm btn-ghost text-xs mr-2">Suka <span class="text-lg">&#9829;</span></span>
+                <BtnSuka />
                 <NuxtLink to="/" class="btn btn-ghost btn-sm">
                     X
                 </NuxtLink>
@@ -93,9 +93,7 @@
 </template>
 
 <script setup>
-
 const isLoading = ref(true)
-
 const route = useRoute()
 const router = useRouter()
 const slug = route.params.slug
@@ -110,14 +108,6 @@ const linkLainnya = `${api_link}/lainnya/${slug}`
 useHead({
     title: `${slug.toUpperCase()} - Aldi Teori`
 })
-
-const formatDate = (dateTimeString) => {
-    const date = new Date(dateTimeString);
-    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-    const formattedDate = date.toLocaleDateString('id-ID', options);
-    const time = date.toLocaleTimeString('id-ID', { hour: 'numeric', minute: 'numeric' });
-    return `${formattedDate} ${time}`;
-}
 
 
 onMounted(async () => {

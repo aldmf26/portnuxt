@@ -9,9 +9,10 @@
         </div>
         <div class="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
 
-            <h1 class="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, reprehenderit
+            <h1 class="text-xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                reprehenderit
                 adipisci tempore voluptas laborum quod.</h1>
-            
+
             <a rel="noopener noreferrer" href="#" class="inline-flex items-center pt-2 pb-6 space-x-2 text-sm ">
                 <span>Baca </span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"
@@ -21,18 +22,20 @@
                         clip-rule="evenodd"></path>
                 </svg>
             </a>
-            <!-- <div class="flex items-center justify-between pt-2">
-                    <div class="flex space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 "
-                            data-darkreader-inline-fill="" style="--darkreader-inline-fill: currentColor;">
-                            <path fill-rule="evenodd"
-                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="self-center text-sm">by Leroy Jenkins</span>
-                    </div>
-                    <span class="text-xs">3 min read</span>
-                </div> -->
+            <div class="flex items-center justify-between pt-2">
+                <div class="flex space-x-2">
+                    <svg class="h-5- w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 10V7C20 5.89543 19.1046 5 18 5H6C4.89543 5 4 5.89543 4 7V10M20 10V19C20 20.1046 19.1046 21 18 21H6C4.89543 21 4 20.1046 4 19V10M20 10H4M8 3V7M16 3V7"
+                            stroke="#000000" stroke-width="2" stroke-linecap="round" />
+                        <rect x="6" y="12" width="3" height="3" rx="0.5" fill="#000000" />
+                        <rect x="10.5" y="12" width="3" height="3" rx="0.5" fill="#000000" />
+                        <rect x="15" y="12" width="3" height="3" rx="0.5" fill="#000000" />
+                    </svg>
+                    <span class="self-center text-sm">{{ formatDate("2024-01-01") }}</span>
+                </div>
+                <BtnSuka />
+            </div>
         </div>
     </div>
     <!-- <div v-if="isLoading" class="text-center my-4">Loading...</div> -->
