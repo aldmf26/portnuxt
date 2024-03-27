@@ -38,9 +38,20 @@
             </div>
         </div>
     </div>
-    <div class="text-center mt-5">
-        <button class="btn btn-sm btn-outline btn-info">Tampilkan lebih banyak</button>
+    <div class="mt-5">
+        <center>
+            <button v-if="!loader" @click="loadMore" class="btn btn-sm btn-block btn-outline btn-info">Tampilkan lebih
+                banyak</button>
+            <Loader v-show="loader" />
+        </center>
     </div>
-    <!-- <div v-if="isLoading" class="text-center my-4">Loading...</div> -->
 </template>
-
+<script setup>
+const loader = ref(false)
+const loadMore = () => {
+    loader.value = true
+    setTimeout(() => {
+        loader.value = false
+    }, 1000)
+}
+</script>
